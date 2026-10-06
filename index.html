@@ -18,6 +18,8 @@
     <meta name="twitter:title" content="[PROTOTYPE] EPHPHATHA - Be opened" />
     <meta name="twitter:description" content="Mentorat et accompagnement linguistique à Kinshasa." />
     <meta name="twitter:image" content="/ephphatha-preview/ephphatha-logo.jpg" />
+    <script src="/ephphatha-preview/i18n/dictionary.js"></script>
+    <script src="/ephphatha-preview/i18n/i18n.js"></script>
     <script type="module" crossorigin src="/ephphatha-preview/assets/index-Cv-Y-q6s.js"></script>
     <link rel="stylesheet" crossorigin href="/ephphatha-preview/assets/index-B6E8Om9K.css">
   </head>
@@ -25,20 +27,28 @@
   <body>
     <div id="root"></div>
   <script>
-(function(){var c={"feedback": "", "version": "Version 6ef46a6, 6 oct. 2026"};
+(function(){var c={"feedback": "", "version": "Version 340de61 - 2026-10-06"};
+var X={en:{"PROTOTYPE — ce n’est pas le site officiel.":"PROTOTYPE — this is not the official website.",
+"Les formulaires sont désactivés : rien ne sera envoyé.":"Forms are disabled: nothing will be sent.",
+"Aller au site officiel":"Go to the official site","Donner mon avis":"Give feedback"},
+pt:{"PROTOTYPE — ce n’est pas le site officiel.":"PROTÓTIPO — este não é o site oficial.",
+"Les formulaires sont désactivés : rien ne sera envoyé.":"Os formulários estão desativados: nada será enviado.",
+"Aller au site officiel":"Ir para o site oficial","Donner mon avis":"Dar a minha opinião"}};
 function add(){var b=document.createElement('div');
 b.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:#b71c1c;color:#fff;font:14px/1.4 system-ui,sans-serif;padding:9px 14px;display:flex;gap:6px 14px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;border-top:3px solid #fff');
 var t=document.createElement('strong');
 t.textContent='PROTOTYPE — ce n’est pas le site officiel.';
 b.appendChild(t);
 var s=document.createElement('span');
-s.textContent='Les formulaires sont désactivés : rien ne sera envoyé. '+c.version;
+s.textContent='Les formulaires sont désactivés : rien ne sera envoyé.';
 b.appendChild(s);
+var v=document.createElement('span');v.setAttribute('data-eph-skip','');v.textContent=c.version;v.setAttribute('style','opacity:.85');b.appendChild(v);
 var o=document.createElement('a');o.href='https://ephphatha.africa';o.rel='noopener noreferrer';
 o.textContent='Aller au site officiel';o.setAttribute('style','color:#fff;text-decoration:underline;font-weight:600');b.appendChild(o);
 if(c.feedback){var a=document.createElement('a');a.href=c.feedback;a.target='_blank';a.rel='noopener noreferrer';
 a.textContent='Donner mon avis';a.setAttribute('style','background:#ffc107;color:#111;padding:5px 12px;border-radius:6px;text-decoration:none;font-weight:600');b.appendChild(a);}
-document.body.appendChild(b);document.body.style.paddingBottom='64px';}
+document.body.appendChild(b);document.body.style.paddingBottom='64px';
+if(window.EphI18n)window.EphI18n.extend(X);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();})();
 </script>
 </body>
