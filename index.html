@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/ephphatha-preview/ephphatha-logo.jpg" type="image/jpeg" />
-    <title>EPHPHATHA - Mentorat & Accompagnement Linguistique</title>
+    <title>[PROTOTYPE] EPHPHATHA - Mentorat & Accompagnement Linguistique</title>
     <meta name="description" content="EPHPHATHA : mentorat et accompagnement linguistique à Kinshasa. Be opened - apprenez, progressez, ouvrez-vous au monde." />
     <meta name="author" content="Othniel Tshilumba" />
 
-    <meta property="og:title" content="EPHPHATHA - Be opened" />
+    <meta property="og:title" content="[PROTOTYPE] EPHPHATHA - Be opened" />
     <meta property="og:description" content="Mentorat et accompagnement linguistique à Kinshasa. Be opened - apprenez, progressez, ouvrez-vous au monde." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/ephphatha-preview/ephphatha-logo.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EPHPHATHA - Be opened" />
+    <meta name="twitter:title" content="[PROTOTYPE] EPHPHATHA - Be opened" />
     <meta name="twitter:description" content="Mentorat et accompagnement linguistique à Kinshasa." />
     <meta name="twitter:image" content="/ephphatha-preview/ephphatha-logo.jpg" />
     <script type="module" crossorigin src="/ephphatha-preview/assets/index-Cv-Y-q6s.js"></script>
@@ -25,16 +25,20 @@
   <body>
     <div id="root"></div>
   <script>
-(function(){var c={"feedback": ""};
+(function(){var c={"feedback": "", "version": "Version a0404c9, 6 oct. 2026"};
 function add(){var b=document.createElement('div');
-b.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:#111;color:#fff;font:14px/1.4 system-ui,sans-serif;padding:8px 14px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center');
-var t=document.createElement('span');
-t.textContent='Version de test (brouillon). Les formulaires sont d\u00e9sactiv\u00e9s : rien ne sera envoy\u00e9.';
+b.setAttribute('style','position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:#b71c1c;color:#fff;font:14px/1.4 system-ui,sans-serif;padding:9px 14px;display:flex;gap:6px 14px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;border-top:3px solid #fff');
+var t=document.createElement('strong');
+t.textContent='PROTOTYPE — ce n’est pas le site officiel.';
 b.appendChild(t);
+var s=document.createElement('span');
+s.textContent='Les formulaires sont désactivés : rien ne sera envoyé. '+c.version;
+b.appendChild(s);
+var o=document.createElement('a');o.href='https://ephphatha.africa';o.rel='noopener noreferrer';
+o.textContent='Aller au site officiel';o.setAttribute('style','color:#fff;text-decoration:underline;font-weight:600');b.appendChild(o);
 if(c.feedback){var a=document.createElement('a');a.href=c.feedback;a.target='_blank';a.rel='noopener noreferrer';
 a.textContent='Donner mon avis';a.setAttribute('style','background:#ffc107;color:#111;padding:5px 12px;border-radius:6px;text-decoration:none;font-weight:600');b.appendChild(a);}
-else{var s=document.createElement('span');s.textContent='Envoyez vos remarques \u00e0 la personne qui vous a partag\u00e9 ce lien.';b.appendChild(s);}
-document.body.appendChild(b);}
+document.body.appendChild(b);document.body.style.paddingBottom='64px';}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();})();
 </script>
 </body>
