@@ -918,9 +918,9 @@ html:not(.js) .svc-more { display: none; }
    The page is written in French. This script swaps every DISPLAYED French text for its English or Portuguese version,
    looked up in window.EPH_DICTIONARY (built from content/i18n.mjs). Same behaviour as the language switch of the
    current-site preview:
-     - first visit: language of the visitor's browser (fr, en or pt; anything else -> French);
-     - the FR | EN | PT buttons ([data-set-lang]) change it at once; the choice is remembered (same storage key as the
-       preview of the current site, so the two pages follow each other);
+     - every visit starts in the language of the visitor's phone / browser (fr, en or pt; any other language -> English);
+     - the FR | EN | PT buttons ([data-set-lang]) change it at once; that choice is kept for the current tab only
+       (sessionStorage), so a visitor who later changes the phone language gets the new one;
      - a link ending in ?lang=en (or fr / pt) opens the page in that language.
    A French text that is not in the dictionary stays in French; text typed by the visitor is never touched.
    Texts the page assembles itself ("Étape 1 sur 2", "Intérêt : …", "Français, Anglais") are handled by PATTERNS. */
@@ -936,8 +936,8 @@ html:not(.js) .svc-more { display: none; }
   var lang = 'fr';
 
   /* ---------------------------------------------------------------- choice of the language */
-  function storeGet() { try { return window.localStorage.getItem(STORE_KEY); } catch (e) { return null; } }
-  function storeSet(v) { try { window.localStorage.setItem(STORE_KEY, v); } catch (e) { /* private mode */ } }
+  function storeGet() { try { return window.sessionStorage.getItem(STORE_KEY); } catch (e) { return null; } }
+  function storeSet(v) { try { window.sessionStorage.setItem(STORE_KEY, v); } catch (e) { /* private mode */ } }
   function fromTag(tag) {
     var base = String(tag || '').toLowerCase().split(/[-_]/)[0];
     return LANGS.indexOf(base) >= 0 ? base : null;
@@ -950,7 +950,7 @@ html:not(.js) .svc-more { display: none; }
     if (saved) return saved;
     var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
     for (var i = 0; i < list.length; i++) { var l = fromTag(list[i]); if (l) return l; }
-    return 'fr';
+    return 'en';
   }
 
   /* ---------------------------------------------------------------- lookup */
