@@ -602,7 +602,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     </div>
     <div class="acc__item" data-acc-item>
       <h3 class="acc__q"><button class="acc__btn" type="button" id="faq-q1" aria-controls="faq-a1" aria-expanded="false" data-acc-btn><span>Comment se passe l’essai gratuit ?</span><span class="acc__icon" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
-      <div class="acc__panel" id="faq-a1" role="region" aria-labelledby="faq-q1" data-acc-panel><div class="acc__inner"><p>Vous remplissez le formulaire d’inscription puis choisissez « Essayer gratuitement ». L’équipe vous recontacte pour organiser une première prise de contact avec votre mentor.</p></div></div>
+      <div class="acc__panel" id="faq-a1" role="region" aria-labelledby="faq-q1" data-acc-panel><div class="acc__inner"><p>Vous cliquez sur « Réserver un essai gratuit » et nous laissez vos coordonnées. L’équipe vous recontacte pour organiser une première prise de contact avec votre mentor.</p></div></div>
     </div>
     <div class="acc__item" data-acc-item>
       <h3 class="acc__q"><button class="acc__btn" type="button" id="faq-q2" aria-controls="faq-a2" aria-expanded="false" data-acc-btn><span>Où ont lieu les séances ?</span><span class="acc__icon" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
@@ -673,9 +673,9 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     <div class="sheet__scroll" data-sheet-scroll>
       <form class="form" data-form="trial" novalidate>
         <header class="form__head" data-success-hide>
-          <p class="eyebrow" data-mode-text data-trial="Essai gratuit" data-notify="Être informé(e)">Essai gratuit</p>
-          <h2 class="sheet__title" id="trial-title" tabindex="-1" data-autofocus data-mode-text data-trial="Réservez votre première séance" data-notify="Être informé(e) du lancement">Réservez votre première séance</h2>
-          <p class="sheet__lead" data-mode-text data-trial="Dites-nous ce que vous cherchez : l’équipe vous recontacte pour organiser une première prise de contact gratuite." data-notify="Laissez-nous votre contact : nous vous prévenons dès son ouverture.">Dites-nous ce que vous cherchez : l’équipe vous recontacte pour organiser une première prise de contact gratuite.</p>
+          <p class="eyebrow" data-mode-text data-trial="Essai gratuit" data-notify="Être informé(e)" data-quote="Formation externe">Essai gratuit</p>
+          <h2 class="sheet__title" id="trial-title" tabindex="-1" data-autofocus data-mode-text data-trial="Réservez votre première séance" data-notify="Être informé(e) du lancement" data-quote="Demandez une proposition">Réservez votre première séance</h2>
+          <p class="sheet__lead" data-mode-text data-trial="Dites-nous ce que vous cherchez : l’équipe vous recontacte pour organiser une première prise de contact gratuite." data-notify="Laissez-nous votre contact : nous vous prévenons dès son ouverture." data-quote="Laissez-nous votre contact : l’équipe vous recontacte pour construire avec vous un programme adapté à votre organisation.">Dites-nous ce que vous cherchez : l’équipe vous recontacte pour organiser une première prise de contact gratuite.</p>
           <p class="form__context" data-context hidden></p>
           <div class="progress" data-progress><span class="progress__label" data-progress-label>Étape 1 sur 2</span><span class="progress__track" aria-hidden="true"><i data-progress-bar></i></span></div>
         </header>
@@ -704,7 +704,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
         </div>
 
         <div data-step="2" data-success-hide hidden>
-          <h3 class="step__title" data-step-title data-mode-text data-trial="Vos coordonnées" data-notify="Vos coordonnées">Vos coordonnées</h3>
+          <h3 class="step__title" data-step-title data-mode-text data-trial="Vos coordonnées" data-notify="Vos coordonnées" data-quote="Vos coordonnées">Vos coordonnées</h3>
           <div class="field" data-field>
             <label class="field__label" for="trial-name">Nom complet</label>
             <input class="field__input" id="trial-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" data-validate="name">
@@ -715,7 +715,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
             <input class="field__input" id="trial-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+243 …" data-validate="phone">
             <p class="field__err" id="trial-err-phone" data-err="phone" hidden></p>
           </div>
-          <div class="field" data-field data-for="trial">
+          <div class="field" data-field data-for="trial quote">
             <label class="field__label" for="trial-email">Adresse e-mail <span class="group__opt">facultatif</span></label>
             <input class="field__input" id="trial-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="vous@exemple.com" data-validate="email">
             <p class="field__err" id="trial-err-email" data-err="email" hidden></p>
@@ -728,7 +728,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
       </fieldset></div>
           <div class="form__actions form__actions--split">
             <button class="btn btn--ghost" type="button" data-prev data-for="trial"><svg class="ico ico--flip" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Retour</span></button>
-            <button class="btn btn--primary" type="submit" data-submit><span data-label data-mode-text data-trial="Envoyer ma demande" data-notify="Me prévenir">Envoyer ma demande</span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="btn btn--primary" type="submit" data-submit><span data-label data-mode-text data-trial="Envoyer ma demande" data-notify="Me prévenir" data-quote="Demander une proposition">Envoyer ma demande</span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </div>
           <p class="form__note">Prototype : la demande est simulée, rien n’est envoyé.</p>
         </div>
@@ -736,7 +736,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
         <div class="form__success" data-success hidden>
           <span class="success__icon"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
           <h2 class="sheet__title success__title" data-success-title>Demande enregistrée</h2>
-          <p class="success__text">Merci <strong data-first-name></strong>. Ceci est une simulation : <strong>aucune donnée n’a été envoyée</strong>. Sur le site officiel, l’équipe vous recontacterait ensuite.</p>
+          <p class="success__text">Merci <strong data-first-name data-eph-skip></strong>. Ceci est une simulation : <strong>aucune donnée n’a été envoyée</strong>. Sur le site officiel, l’équipe vous recontacterait ensuite.</p>
           <dl class="summary" data-summary></dl>
           <div class="form__actions form__actions--col">
             <a class="btn btn--primary" data-wa href="https://wa.me/243823960150?text=Bonjour%20EPHPHATHA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20accompagnements%20linguistiques." target="_blank" rel="noopener"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.2A8.5 8.5 0 1 1 20.5 12Z"/><path d="M9.2 8.6c.2 2.9 2.4 5.3 5.6 6.4l1.3-1.3-2-1.2-1 .7a5 5 0 0 1-2.2-2.2l.7-1-1.2-2-1.2 1.6Z"/></svg><span>Poursuivre sur WhatsApp</span></a>
@@ -772,7 +772,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     <ul class="checks"><li><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Programme construit à partir des informations que vous nous donnez</span></li><li><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>En ligne ou en présentiel, sur votre site</span></li><li><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Calendrier adapté à votre organisation</span></li><li><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Tarif dégressif, à partir de 30 $ par participant</span></li></ul>
     
     
-    <div class="svc-detail__actions"><button class="btn btn--primary" type="button" data-open="trial" data-subject="Intérêt : Formations externes"><span>Demander une proposition</span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><a class="btn btn--ghost" href="https://wa.me/243823960150?text=Bonjour%20EPHPHATHA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20%3A%20Formations%20externes." target="_blank" rel="noopener"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.2A8.5 8.5 0 1 1 20.5 12Z"/><path d="M9.2 8.6c.2 2.9 2.4 5.3 5.6 6.4l1.3-1.3-2-1.2-1 .7a5 5 0 0 1-2.2-2.2l.7-1-1.2-2-1.2 1.6Z"/></svg><span>Poser une question</span></a></div>
+    <div class="svc-detail__actions"><button class="btn btn--primary" type="button" data-open="trial" data-mode="quote" data-subject="Intérêt : Formations externes"><span>Demander une proposition</span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><a class="btn btn--ghost" href="https://wa.me/243823960150?text=Bonjour%20EPHPHATHA%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20%3A%20Formations%20externes." target="_blank" rel="noopener"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.2A8.5 8.5 0 1 1 20.5 12Z"/><path d="M9.2 8.6c.2 2.9 2.4 5.3 5.6 6.4l1.3-1.3-2-1.2-1 .7a5 5 0 0 1-2.2-2.2l.7-1-1.2-2-1.2 1.6Z"/></svg><span>Poser une question</span></a></div>
   </div>
 </article>
 </template>
@@ -834,7 +834,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
 </template>
 
 <script>window.EPH_CONFIG={"whatsapp":"243823960150"};</script>
-<script>/* EPHPHATHA prototypes: shared behaviour. Plain ES2018, no dependency, driven by data-attributes so that each
+<script>/* EPHPHATHA prototypes: shared behaviour. Plain ES5, no dependency, driven by data-attributes so that each
    visual skin only provides markup + CSS. Nothing is ever sent anywhere: forms are simulated. */
 (function () {
   'use strict';
@@ -854,7 +854,8 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
   }
 
   /* What the visitor picked so far (shared by the language chips, the service sheet and the forms). */
-  var state = { langs: [], service: '', subject: '' };
+  // `subject` belongs to the trial dialog; `cbSubject` to the inline callback form, so closing one never changes the other.
+  var state = { langs: [], service: '', subject: '', cbSubject: '' };
 
   /* ================================================================== layers: mobile menu + sheets */
   var stack = [];   // open layers, last = top: { el, opener }
@@ -944,7 +945,13 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
   };
 
   // "Intérêt : Mentorship & Coaching" is stored with its label; the summary row already says "Intérêt".
-  function interest() { return String(state.subject || '').replace(/^Intérêt\s*:\s*/, ''); }
+  function interest(form) {
+    var subject = form && form.getAttribute('data-form') === 'callback' ? state.cbSubject : state.subject;
+    return String(subject || '').replace(/^Intérêt\s*:\s*/, '');
+  }
+
+  // Modes of the trial dialog: 'trial' (2 steps), 'notify' (launch alert) and 'quote' (proposal request) are single-step.
+  function singleStep(mode) { return mode === 'notify' || mode === 'quote'; }
 
   function checkedValues(form, name) { return $$('[name="' + name + '"]:checked', form).map(function (i) { return i.value; }); }
 
@@ -982,23 +989,26 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
 
   function summaryRows(form, mode) {
     var rows = [];
-    function add(label, value) { if (value) rows.push([label, value]); }
+    // `raw` rows hold what the visitor typed: the language layer must never translate them
+    function add(label, value, raw) { if (value) rows.push([label, value, !!raw]); }
     var kind = form.getAttribute('data-form');
     if (mode === 'notify') add('Sujet', state.subject);
     else if (kind === 'callback') {
-      add('Intérêt', interest());
+      add('Intérêt', interest(form));
       add('Langue(s)', state.langs.join(', '));
     } else {
-      add('Intérêt', interest());
-      add('Langue(s)', checkedValues(form, 'langs').join(', '));
-      add('Objectif', checkedValues(form, 'goal').join(', '));
-      add('Niveau', checkedValues(form, 'level').join(', '));
-      add('Disponibilités', checkedValues(form, 'slots').join(', '));
+      add('Intérêt', interest(form));
+      if (mode !== 'quote') {   // a proposal request never shows the questions of step 1, whatever was pre-ticked there
+        add('Langue(s)', checkedValues(form, 'langs').join(', '));
+        add('Objectif', checkedValues(form, 'goal').join(', '));
+        add('Niveau', checkedValues(form, 'level').join(', '));
+        add('Disponibilités', checkedValues(form, 'slots').join(', '));
+      }
     }
     var n = $('[name="name"]', form), p = $('[name="phone"]', form) || $('[name="contact"]', form), m = $('[name="email"]', form);
-    add('Nom', n && n.value.trim());
-    add(p && p.name === 'contact' ? 'Contact' : 'Téléphone', p && p.value.trim());
-    add('E-mail', m && m.value.trim());
+    add('Nom', n && n.value.trim(), true);
+    add(p && p.name === 'contact' ? 'Contact' : 'Téléphone', p && p.value.trim(), true);
+    add('E-mail', m && m.value.trim(), true);
     return rows;
   }
 
@@ -1006,6 +1016,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     var kind = form.getAttribute('data-form');
     var head = mode === 'notify'
       ? 'Bonjour EPHPHATHA, je souhaite être informé(e) du lancement (' + (state.subject || 'vos nouveaux programmes') + ').'
+      : mode === 'quote' ? 'Bonjour EPHPHATHA, je souhaite recevoir une proposition de formation.'
       : kind === 'callback' ? 'Bonjour EPHPHATHA, je souhaite être rappelé(e).' : 'Bonjour EPHPHATHA, je souhaite réserver un essai gratuit.';
     return head + '\n' + summaryRows(form, mode).map(function (r) { return r[0] + ' : ' + r[1]; }).join('\n');
   }
@@ -1019,6 +1030,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
       summaryRows(form, mode).forEach(function (r) {
         var dt = doc.createElement('dt'), dd = doc.createElement('dd');
         dt.textContent = r[0]; dd.textContent = r[1];
+        if (r[2]) dd.setAttribute('data-eph-skip', '');
         dl.appendChild(dt); dl.appendChild(dd);
       });
     }
@@ -1045,7 +1057,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
 
   function showStep(form, n) {
     $$('[data-step]', form).forEach(function (s) { s.hidden = String(s.getAttribute('data-step')) !== String(n); });
-    var total = formMode(form) === 'notify' ? 1 : 2;
+    var total = singleStep(formMode(form)) ? 1 : 2;
     var bar = $('[data-progress-bar]', form);
     if (bar) bar.style.setProperty('--p', (n / total * 100) + '%');
     var label = $('[data-progress-label]', form);
@@ -1078,7 +1090,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     state.subject = opts.subject || '';
     resetForm(form);
     setMode(form, mode);
-    showStep(form, mode === 'notify' ? 2 : 1);
+    showStep(form, singleStep(mode) ? 2 : 1);
     (opts.langs || []).forEach(function (l) { var i = $('input[name="langs"][value="' + l + '"]', form); if (i) i.checked = true; });
     setContext(form, state.subject, mode);
   }
@@ -1106,7 +1118,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     $$('[data-reset]', form).forEach(function (b) {
       on(b, 'click', function () {
         if (kind === 'trial') prepareTrial(form, { mode: formMode(form), subject: state.subject, langs: state.langs });
-        else { resetForm(form); setContext(form, state.subject, formMode(form)); }
+        else { resetForm(form); setContext(form, state.cbSubject, formMode(form)); }
         var t = $('[data-autofocus]', form) || $('[name="name"]', form);
         if (t) t.focus();
       });
@@ -1166,6 +1178,10 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     $$('[data-lang-group]').forEach(function (group) {
       var info = $(group.getAttribute('data-info'));
       var buttons = $$('[data-lang]', group);
+      // A skin whose info link scrolls to an inline form (data-scroll-focus) still needs the notify dialog for a
+      // language that is not open yet: the inline form is a callback request, not a launch alert.
+      var firstAct = info && $('[data-info-action]', info);
+      var focusSel = firstAct ? firstAct.getAttribute('data-scroll-focus') : null;
 
       function describe(btn) {
         if (!info) return;
@@ -1177,6 +1193,10 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
           act.setAttribute('data-mode', soon ? 'notify' : 'trial');
           act.setAttribute('data-subject', soon ? 'Langue : ' + lang : '');
           act.setAttribute('data-lang-pick', soon ? '' : lang);
+          if (focusSel) {
+            if (soon) { act.removeAttribute('data-scroll-focus'); act.setAttribute('data-open', 'trial'); act.setAttribute('aria-haspopup', 'dialog'); }
+            else { act.setAttribute('data-scroll-focus', focusSel); act.removeAttribute('data-open'); act.removeAttribute('aria-haspopup'); }
+          }
           var lab = $('[data-info-action-label]', act) || act;
           lab.textContent = soon ? 'Être informé(e) du lancement' : 'Réserver un essai en ' + lang.toLowerCase();
         }
@@ -1253,7 +1273,9 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
     var els = $$('[data-reveal]');
     if (!els.length || !('IntersectionObserver' in window) || reduceMotion) return;
     root.classList.add('js-reveal');
+    var reported = false;
     var io = new IntersectionObserver(function (entries) {
+      reported = true;
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
     }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
     els.forEach(function (el) {
@@ -1261,8 +1283,9 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
       if (d) el.style.setProperty('--d', d + 'ms');
       io.observe(el);
     });
-    // never leave content hidden if the observer is slow
-    window.setTimeout(function () { els.forEach(function (el) { el.classList.add('is-in'); }); }, 5000);
+    // never leave content hidden if the observer never reports (it normally reports once, straight away): only then
+    // reveal everything, so a slow reader still gets the animation on the blocks further down
+    window.setTimeout(function () { if (!reported) els.forEach(function (el) { el.classList.add('is-in'); }); }, 3000);
   }
 
   /* ================================================================== click delegation */
@@ -1311,7 +1334,7 @@ body { background: var(--bg); color: var(--ivory); font: 300 17px/1.55 var(--fon
       }
       var cb = $('form[data-form="callback"]');
       if (cb) {
-        state.subject = subj;
+        state.cbSubject = subj;
         var hadSuccess = $('[data-success]', cb) && !$('[data-success]', cb).hidden;
         if (hadSuccess) resetForm(cb);
         setContext(cb, subj, formMode(cb));
